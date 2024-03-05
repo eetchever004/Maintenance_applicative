@@ -1,0 +1,6 @@
+	Classe voiture :
+Code dupliqué
+Bilingue ?
+
+	Classe conducteur :
+Présence de procédures liées à la voiture
