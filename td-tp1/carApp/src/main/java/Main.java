@@ -8,12 +8,12 @@ public class Main {
         Car myCar = new Car("Sedan", "Blue");
         Driver moi = new Driver("John", AGE);
 
-        moi.startCar(myCar);
+        myCar.startCar(moi);
         myCar.accelerate();
-        moi.switchSpeed(myCar, NEW_SPEED1);
+        myCar.switchSpeed(NEW_SPEED1, moi);
         myCar.slowDown();
-        moi.switchSpeed(myCar, NEW_SPEED2);
-        moi.stopCar(myCar);
+        myCar.switchSpeed(NEW_SPEED2, moi);
+        myCar.stopCar(moi);
         System.out.println("end");
     }
 }

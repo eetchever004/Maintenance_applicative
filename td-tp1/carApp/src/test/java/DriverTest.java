@@ -19,14 +19,14 @@ public class DriverTest {
     @Test
     public void testDemarrerVoiture() {
         Car car = new Car("Sedan", "Bleu");
-        driver.startCar(car);
+        car.startCar(driver);
         // How to assert that the demarrerVoiture method was called?
     }
 
     @Test
     public void testArreterVoiture() {
         Car car = new Car("Sedan", "Bleu");
-        driver.stopCar(car);
+        car.stopCar(driver);
         // How to assert that the arreterVoiture method was called?
     }
 
@@ -34,7 +34,7 @@ public class DriverTest {
     public void testChangerVitesse() {
         Car car = new Car("Sedan", "Bleu");
 
-        driver.switchSpeed(car, 80);
+        car.switchSpeed(80, driver);
         assertThat(car.getSpeed()).isEqualTo(80);
     }
 }

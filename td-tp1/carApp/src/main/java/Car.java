@@ -41,5 +41,31 @@ public class Car {
         System.out.println("Color : " + color);
         System.out.println("Current speed : " + speed);
     }
+
+    public void startCar(Driver driver) {
+        if (driver.isAdult()) {
+            System.out.println(driver.getName() + " is starting the car.");
+        } else {
+            System.out.println("The driver isn't old enough to drive.");
+        }
+    }
+
+    public void stopCar(Driver driver) {
+        System.out.println(driver.getName() + " is stopping the car.");
+    }
+
+    public void switchSpeed(int newSpeed, Driver driver) {
+        System.out.println(driver.getName() + " is changing the car speed to " + newSpeed);
+        int currentSpeed = getSpeed();
+        if (currentSpeed >= newSpeed) {
+            while (currentSpeed > newSpeed) {
+                slowDown();
+            }
+        } else  {
+            while (currentSpeed < newSpeed) {
+                accelerate();
+            }
+        }
+    }
 }
 
