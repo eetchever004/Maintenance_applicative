@@ -1,6 +1,8 @@
 	Classe voiture :
-Code dupliqué
+Code dupliqué -> extraction de méthode
 Bilingue ?
 
 	Classe conducteur :
 Présence de procédures liées à la voiture
+
+Renommage en anglais
