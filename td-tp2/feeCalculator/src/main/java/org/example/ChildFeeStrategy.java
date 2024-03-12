@@ -12,4 +12,9 @@ public class ChildFeeStrategy implements FeeStrategy {
         }
         throw (new IllegalArgumentException("TicketType not supported"));
     }
+
+    @Override
+    public boolean accept(Visitor visitor) {
+        return visitor.getAge() <= 14;
+    }
 }
