@@ -30,7 +30,7 @@ public class FeeCalculator {
             i ++;
         }
 
-        // retourner fee so 1 et 1 seule stratégie
+        // retourner fee si 1 et 1 seule stratégie
         if (compteurStrategiesOK != 1) {
             throw new IllegalArgumentException();
         }

@@ -1,6 +1,8 @@
 package org.example;
 
 import java.util.ArrayList;
+import java.util.Observable;
+
 public class Panier {
     private GestionDeStock stock;
     private Comptabilite compta;
@@ -16,8 +18,16 @@ public class Panier {
         return this.contenu;
     };
 
+    // sujet d'obervation -> créer classe et la faire hériter de la classe observable
     public void declencherCommande() {
         this.stock.traite(this.contenu);
         this.compta.traite(this.contenu);
     }
+
+    public class DeclenchementCommande extends Observable {
+        public void notifyObservers() {
+            
+        }
+    }
+
 }
