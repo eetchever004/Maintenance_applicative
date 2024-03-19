@@ -1,8 +1,9 @@
 package org.example;
 
 import java.util.ArrayList;
+import java.util.Observer;
 
-public class GestionDeStock {
+public class GestionDeStock implements Observer {
     private String gestionStock;
 
     public GestionDeStock(String pGestionStock) {
@@ -12,4 +13,6 @@ public class GestionDeStock {
 
         System.out.println("G.DES.STOCKS:" + contenu.toString().toUpperCase());
     }
+
+    public void update()
 }
